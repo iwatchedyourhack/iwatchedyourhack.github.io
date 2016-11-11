@@ -1,0 +1,15 @@
+permalink: /:year-:month-:day/:title/
+
+highlighter: rouge
+markdown: kramdown
+baseurl: ""
+
+
+
+title: "IWatchedYourHack; You Hack, We Watch."
+email: ""
+description: "You hack - We watch, laugh and criticize."
+github_username:  "IWatchedYourHack"
+excerpt_separator: "\n\n"
+
+url: "http://192.168.1.72:4000"

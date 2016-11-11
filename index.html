@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="index">
+	<section>
+		{% for post in site.posts %}
+        	<div class="posts">
+		   	<span class="title"><a class="title" href="{{post.url | prepend: site.baseurl | prepend: site.url }}">{{post.title}}</a></span>
+		   	<br>
+		   	<span class="srclink">
+			Posted on: {{ post.date | date: "%Y-%m-%d"}} <br>
+		   	</span>
+    		{{ post.excerpt }} 
+    {% capture content_words %} 
+      {{ post.content | number_of_words }} 
+    {% endcapture %} 
+    {% capture excerpt_words %} 
+      {{ post.excerpt | number_of_words }} 
+    {% endcapture %} 
+{% if excerpt_words != content_words %}
+	<a class="readmore" href="{{post.url | prepend: site.baseurl | prepend: site.url }}">Read More</a><p>
+	{%endif%}
+<div class="share-page">    
+    <a href="https://twitter.com/intent/tweet?text={{ post.title }}&url={{ site.url }}{{ post.url }}&via=0xIWYH&related=0xIWYH" rel="nofollow" target="_blank" title="Share on Twitter"><img src="/static/img/tweet-button.png"></a>
+</div>
+	<div class="tag">
+	{{post.tag}}
+	</div>
+ 		<hr>
+	        {%endfor%}
+	</section>
+<a href="#" class="scrollToTop"></a>
+</div>
+
