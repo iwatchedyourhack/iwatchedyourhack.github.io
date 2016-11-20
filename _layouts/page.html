@@ -1,6 +1,22 @@
 ---
 layout: default
 ---
+    <script>
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        if (document.getElementById("MySubmit").href.indexOf(path) > 0) {
+            document.getElementById("MyHome").className = "";
+            document.getElementById("MySubmit").className = "active";
+        }
+        else if (document.getElementById("MyAbout").href.indexOf(path) > 0) {
+            document.getElementById("MyHome").className = "";
+            document.getElementById("MyAbout").className = "active";
+        }
+        else if (document.getElementById("MyContact").href.indexOf(path) > 0) {
+            document.getElementById("MyHome").className = "";
+            document.getElementById("MyContact").className = "active";
+        }
+    </script>
 <div class="row">
     <div class="content">
         <div class="sheet">

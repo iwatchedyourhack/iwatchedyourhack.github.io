@@ -5,10 +5,11 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
     <url>
-        <loc>http://192.168.1.72:4000/2016-10-07/lizard-squad-fail/</loc>
-        <lastmod>2016-11-11T16:27:25+02:00</lastmod>
+        <loc>https://iwatchedyourhack.com/2016-11-19/lorem-test/</loc>
+        <lastmod>2016-11-20T18:01:03+02:00</lastmod>
         <changefreq>weekly</changefreq>
     </url>
+    
     
     
     

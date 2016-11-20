@@ -8,12 +8,12 @@
     <meta name="keywords" content="Submit an article,  IWatchedYourHack; You Hack, We Watch." />
     <meta name="description" content="Submit an article,  You hack - We watch, laugh and criticize." />
 
-    <link rel="shortcut icon" type="image/x-icon" media="screen" href="http://192.168.1.72:4000/static/favicon.ico" />
-    <link rel="canonical" href="http://192.168.1.72:4000/contribute/" />
-    <link rel="alternate" type="application/rss+xml" title="IWatchedYourHack; You Hack, We Watch." href="http://192.168.1.72:4000/feed.xml"  />
+    <link rel="shortcut icon" type="image/x-icon" media="screen" href="https://iwatchedyourhack.com/static/favicon.ico" />
+    <link rel="canonical" href="https://iwatchedyourhack.com/contribute/" />
+    <link rel="alternate" type="application/rss+xml" title="IWatchedYourHack; You Hack, We Watch." href="https://iwatchedyourhack.com/feed.xml"  />
 
     <link rel="stylesheet" type="text/css" href="/static/css/github-dark.css" />
-    <link rel="stylesheet" type="text/css" href="http://192.168.1.72:4000/static/css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/jquery.cookiebar.css" />
 
     <script src="/static/js/jquery.min.js"></script>
@@ -43,23 +43,41 @@
 <header>
 	<div class="container">
 	
-       	<h1 href="http://192.168.1.72:4000/">IWatchedYourHack</h1>
+       	<h1 href="https://iwatchedyourhack.com/">IWatchedYourHack</h1>
 	
         <h2>You hack - We watch, laugh and criticize.</h2>
 	<div class="menu">
- <span class="menutxt">
-  [<a class="menuitem" href="/">home</a>] &nbsp;
-  [<a class="menuitem" href="/about">about</a>] &nbsp;
-  [<a class="menuitem" href="/contribute">submit</a>]
- </span>
+ <ul class="topnav" id="myTopnav">
+  <li><a class="active" href="/" id="MyHome">> Home </a></li>
+  <li><a href="/contribute" id="MySubmit">> Submit </a></li>
+  <li><a href="/about" id="MyAbout">> About </a></li>
+  <li><a href="/contact" id="MyContact">> Contact </a></li>
+</ul>
 <div>
+
 
         </div>
 </header>
 
 
     <div class="container">
-        <div class="row">
+            <script>
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        if (document.getElementById("MySubmit").href.indexOf(path) > 0) {
+            document.getElementById("MyHome").className = "";
+            document.getElementById("MySubmit").className = "active";
+        }
+        else if (document.getElementById("MyAbout").href.indexOf(path) > 0) {
+            document.getElementById("MyHome").className = "";
+            document.getElementById("MyAbout").className = "active";
+        }
+        else if (document.getElementById("MyContact").href.indexOf(path) > 0) {
+            document.getElementById("MyHome").className = "";
+            document.getElementById("MyContact").className = "active";
+        }
+    </script>
+<div class="row">
     <div class="content">
         <div class="sheet">
                 <div id="main_content">
@@ -72,14 +90,14 @@ So, you want to contribute? Awesome! You can submit whatever related article you
 There are two obvious ways to do that:
 <p>
 <h2>1. By submitting a pull request</h2>
-The best way to submit an article is to create a pull request on our <a href="https://github.com/IWatchedYourHack/iwatchedyourhack.github.io">github repo</a>. 
+<p>The best way to submit an article is to create a pull request on our <a href="https://github.com/IWatchedYourHack/iwatchedyourhack.github.io">github repo</a>. 
 You do this by forking the repo and creating a new article in the <i>_posts</i> directory. Keep in mind that the headers in the posts that are already there also need to be included in your article. Feel free to add any static content like images or whatnot in the respective folder and use them in your article.<br>
 For more information about making the logs appear as they do here, take a look at the <a href="/about/">About</a> page to see what we use on this site.
 <p>
 Once you have done this create a pull request and wait for feedback or merge.
 <p>
 <h2>2. By email</h2>
-The other method is by email. You can email <a href="mailto:admin@iwatchedyourhack.com">admin@iwatchedyourhack.com</a> with your story. You can send us the story and logs in html, text, or whatever (reasonable) format. Of course don't forget the logfile of your honeypot.<br>
+<p>The other method is by email. You can email <a href="mailto:admin@iwatchedyourhack.com">admin@iwatchedyourhack.com</a> with your story. You can send us the story and logs in html, text, or whatever (reasonable) format. Of course don't forget the logfile of your honeypot.<br>
 Zip, Rar, Word, LaTeX, PDF or any other format is not acceptable and will be ignored.
 <p>
 

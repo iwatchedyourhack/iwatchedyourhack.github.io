@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 li {
-  line-height: 1.4 ;
+  line-height: 0.5px ;
 }
 
 /* Header, <header>
@@ -58,6 +58,7 @@ header h1 {
 header h1:before {
   content: "./ ";
   font-size: 24px;
+  margin
 }
 
 header h2 {
@@ -142,10 +143,10 @@ ul li {
 }
 
 ul li:before {
-  content: ">>";
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 13px;
   color: #53b2e8;
+  opacity: 0.0;
   margin-left: -37px;
   margin-right: 21px;
   line-height: 16px;
@@ -318,9 +319,7 @@ a.footerlink {
   color:#767676;
 }
 .menu {
- background: #6666ff;
- padding-left: 10px;
- color: #00ffff;
+ padding-left: inherit;
  height:18px;
 }
 a.menuitem {
@@ -397,3 +396,35 @@ blockquote p {
     font-family: "Arial";
     content: "\2756 ";
 }
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1b1b1b;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #eaeaea;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li a.active {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+/*
+p {
+  text-align:justify;
+}
+*/
